@@ -11,8 +11,6 @@ class RingBuffer:
         self.storage.add_to_head(item)
         if self.current == self.storage.tail:
             self.current = self.storage.head
-        #else:
-        #    self.current = self.current.next
         self.storage.remove_from_tail()
 
     def append(self, item):
